@@ -1,0 +1,16 @@
+name: Main Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    uses: Soorya8docker/AmexProject/.github/workflows/build.yml@main  # Replace with the reusable workflow repository path
+    with:
+      node-version: '16'
+      run-tests: true
+    secrets:
+      NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
