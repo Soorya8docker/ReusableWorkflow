@@ -10,4 +10,4 @@ on:
 
 jobs:
   call-workflow:
-    uses: ./.github/workflows/ReusableWorkflow.yml
+    uses: Soorya8docker/AmexProject/.github/workflows/ReusableWorkflow.yml@main
