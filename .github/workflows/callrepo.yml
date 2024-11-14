@@ -7,7 +7,15 @@ on:
         description: 'Enter Sprint branch'
         type: string
         required: true
+      Workflow:
+        description: 'Enter Workflow name'
+        type: string
+        required: true
+      RepoName:
+        description: 'Enter Repository name'
+        type: string
+        required: true
 
 jobs:
   call-workflow:
-    uses: Soorya8docker/AmexProject/.github/workflows/ReusableWorkflow.yml@main
+    uses: Soorya8docker/${{ inputs.RepoName }}/.github/workflows/${{ inputs.Workflow }}.yml@main
