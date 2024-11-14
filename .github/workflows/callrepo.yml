@@ -1,0 +1,13 @@
+name: Call a reusable workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      Branch:
+        description: 'Enter Sprint branch'
+        type: string
+        required: true
+
+jobs:
+  call-workflow:
+    uses: ./.github/workflows/ReusableWorkflow.yml
