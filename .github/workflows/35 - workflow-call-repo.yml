@@ -1,0 +1,12 @@
+name: 35 - Workflow call simple-java
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call-workflow-branch-ref:
+    uses: Soorya8docker/ReusableWorkflow/.github/workflows/reusable-workflow.yml@main
+    with:
+      username: Soorya8docker
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
