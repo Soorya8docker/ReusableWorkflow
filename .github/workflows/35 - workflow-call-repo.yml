@@ -9,5 +9,3 @@ jobs:
     with:
       username: Soorya8docker
       branch: master
-    secrets:
-      token: ${{ secrets.GITHUB_TOKEN }}
