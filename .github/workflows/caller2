@@ -1,0 +1,27 @@
+name: Workflow caller - javaparser-maven-sample
+
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        required: true
+        type: string
+        default: Soorya8docker
+      repo:
+        required: true
+        type: string
+        default: javaparser-maven-sample
+      branch:
+        required: true
+        type: string
+        default: master
+
+jobs:
+  call-workflow-branch-ref:
+    uses: Soorya8docker/javaparser-maven-sample/.github/workflows/reusable.yml@master
+    with:
+      username: ${{ inputs.username }}
+      branch: ${{ inputs.branch }}
+      repo: ${{ inputs.repo }}
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
