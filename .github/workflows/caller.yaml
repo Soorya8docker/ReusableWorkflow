@@ -9,5 +9,6 @@ jobs:
     with:
       username: Soorya8docker
       branch: master
+      repo: simple-java-maven-app
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
