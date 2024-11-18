@@ -18,7 +18,7 @@ on:
 
 jobs:
   call-workflow-branch-ref:
-    uses: Soorya8docker/javaparser-maven-sample/.github/workflows/reusable.yml@master
+    uses: Soorya8docker/javaparser-maven-sample/.github/workflows/reusable.yaml@master
     with:
       username: ${{ inputs.username }}
       branch: ${{ inputs.branch }}
