@@ -2,11 +2,6 @@ name: 35 - Workflow call simple-java
 
 on:
   workflow_dispatch:
-    inputs:
-      branch:
-        required: true
-        type: string
-        default: master
 
 jobs:
   call-workflow-branch-ref:
@@ -16,8 +11,3 @@ jobs:
       branch: master
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
-  DEV:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Printing
-      run: echo "${{ inputs.branch }}"
