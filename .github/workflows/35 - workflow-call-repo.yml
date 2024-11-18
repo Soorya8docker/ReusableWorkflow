@@ -17,4 +17,7 @@ jobs:
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
   DEV:
-    runs-on: echo "${{ inputs.branch }}"
+    runs-on: ubuntu-latest
+    steps:
+    - name: Printing
+      run: echo "${{ inputs.branch }}"
