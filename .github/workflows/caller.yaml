@@ -6,13 +6,15 @@ on:
       username:
         required: true
         type: string
+        default: Soorya8docker
       repo:
         required: true
         type: string
+        default: simple-java-maven-app
       branch:
         required: true
         type: string
-
+        default: master
 
 jobs:
   call-workflow-branch-ref:
