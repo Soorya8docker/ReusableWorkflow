@@ -1,0 +1,26 @@
+name: Workflow caller - AmexProject
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        required: true
+        type: string
+        default: Soorya8docker
+      repo:
+        required: true
+        type: string
+        default: AmexProject
+      branch:
+        required: true
+        type: string
+        default: master
+
+jobs:
+  call-workflow-branch-ref:
+    uses: Soorya8docker/AmexProject/.github/workflows/reusable.yaml@main
+    with:
+      username: ${{ inputs.username }}
+      branch: ${{ inputs.branch }}
+      repo: ${{ inputs.repo }}
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
