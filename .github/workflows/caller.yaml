@@ -16,7 +16,7 @@ on:
 
 jobs:
   call-workflow-branch-ref:
-    uses: ${{ inputs.username }}/${{ inputs.repo }}/.github/workflows/reusable.yml@${{inputs.branch}}
+    uses: ${{ inputs.username }}/${{ inputs.repo }}/.github/workflows/reusable.yml@master
     with:
       username: ${{ inputs.username }}
       branch: ${{ inputs.branch }}
