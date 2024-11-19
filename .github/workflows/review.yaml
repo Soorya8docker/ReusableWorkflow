@@ -5,14 +5,10 @@ on:
 
 
 jobs:
-  build:
+   PROD_Deploy:
     runs-on: ubuntu-latest
-    env:
-      name: Dev
+    environment: Dev
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ inputs.node-version }}
+    - name: PROD Deployment with input
+      shell: bash
+      run: echo "testing"
