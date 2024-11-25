@@ -1,0 +1,23 @@
+name: Workflow caller - ALL3
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        required: true
+        type: string
+      branch:
+        required: true
+        type: string
+      repo:
+        required: true
+        type: string
+
+jobs:
+  call-workflow-simple-java-maven-app:
+    uses: ${{ inputs.username }}/${{ inputs.repo }}/.github/workflows/reusable.yml@${{ inputs.branch }}
+    with:
+      username: ${{ inputs.username }}
+      branch: ${{ inputs.branch }}
+      repo: ${{ inputs.repo }}
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
