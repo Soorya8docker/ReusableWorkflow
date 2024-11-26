@@ -1,4 +1,4 @@
-name: Workflow caller - simple-java-maven-app
+name: Var caller - simple-java-maven-app
 
 on:
   workflow_dispatch:
