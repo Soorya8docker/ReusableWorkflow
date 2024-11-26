@@ -4,17 +4,27 @@ on:
   workflow_dispatch:
     inputs:
       username:
+        description: 'Select the username'
         required: true
-        type: string
+        type: choice
+        options:
+          - Soorya8docker
         default: Soorya8docker
       repo:
+        description: 'Select the repo name'
         required: true
-        type: string
-        default: simple-java-maven-app
+        type: choice
+        options:
+          - simple-java-maven-app
+          - javaparser-maven-sample
+          - AmexProject
       branch:
+        description: 'Select the branch name'
         required: true
-        type: string
-        default: master
+        type: choice
+        options:
+          - master
+          - main
 
 jobs:
   call-workflow-branch-ref:
