@@ -1,4 +1,4 @@
-name: Var caller - simple-java-maven-app
+name: Workflow Caller - Any Repo
 
 on:
   workflow_dispatch:
