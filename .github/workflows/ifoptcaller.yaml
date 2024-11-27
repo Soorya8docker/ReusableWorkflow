@@ -1,4 +1,4 @@
-name: Workflow Caller - Optional Repo
+name: Workflow Caller - Optional Repo Dynamic
 
 on:
   workflow_dispatch:
