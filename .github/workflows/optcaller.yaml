@@ -50,6 +50,7 @@ jobs:
 
   call-workflow-javaparser-maven-sample:
     if: ${{ inputs.repo == 'ALL' }}
+    needs: call-workflow-simple-java-maven-app
     uses: Soorya8docker/javaparser-maven-sample/.github/workflows/reusable.yaml@master
     with:
       username: Soorya8docker
@@ -60,6 +61,7 @@ jobs:
 
   call-workflow-AmexProject:
     if: ${{ inputs.repo == 'ALL' }}
+    needs: call-workflow-javaparser-maven-sample
     uses: Soorya8docker/AmexProject/.github/workflows/reusable.yaml@main
     with:
       username: Soorya8docker
