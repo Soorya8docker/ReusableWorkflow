@@ -34,6 +34,6 @@ jobs:
     with:
       username: ${{ inputs.username }}
       branch: ${{ inputs.branch }}
-      repo: ${{ inputs.repo }}
+      repo: ${{ inputs.username }}/${{ inputs.repo }}
     secrets:
       token: ${{ secrets.GITHUB_TOKEN }}
