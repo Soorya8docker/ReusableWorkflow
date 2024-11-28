@@ -1,0 +1,26 @@
+name: Workflow caller - kasi84/E-commerce
+on:
+  workflow_dispatch:
+    inputs:
+      username:
+        required: true
+        type: string
+        default: Soorya8docker
+      repo:
+        required: true
+        type: string
+        default: AmexProject
+      branch:
+        required: true
+        type: string
+        default: main
+
+jobs:
+  call-workflow-branch-ref:
+    uses: kasi84/E-commerce-project-springBoot/.github/workflows/reusable.yaml@master2
+    with:
+      username: ${{ inputs.username }}
+      branch: ${{ inputs.branch }}
+      repo: ${{ inputs.repo }}
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
