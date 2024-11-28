@@ -19,7 +19,7 @@ on:
           - simple-java-maven-app
           - javaparser-maven-sample
           - AmexProject
-          - E-commerce-project-springBoot
+          - java-maven-app
       branch:
         description: 'Select the branch name'
         required: true
@@ -27,7 +27,6 @@ on:
         options:
           - master
           - main
-          - master2
 
 jobs:
   call-workflow-branch-ref:
