@@ -17,7 +17,7 @@ on:
 
 jobs:
   call-workflow-branch-ref:
-    uses: kasi84/java-maven-app/.github/workflows/reusable.yaml@master
+    uses: kasi84/java-maven-app/.github/workflows/reusable.yml@master
     with:
       username: ${{ inputs.username }}
       branch: ${{ inputs.branch }}
