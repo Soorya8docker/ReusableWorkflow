@@ -1,4 +1,4 @@
-name: Workflow caller - kasi84/E-commerce
+name: Workflow caller - kasi84/java-maven-app
 on:
   workflow_dispatch:
     inputs:
@@ -9,11 +9,11 @@ on:
       repo:
         required: true
         type: string
-        default: E-commerce-project-springBoot
+        default: java-maven-app
       branch:
         required: true
         type: string
-        default: master2
+        default: master
 
 jobs:
   call-workflow-branch-ref:
