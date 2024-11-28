@@ -5,15 +5,15 @@ on:
       username:
         required: true
         type: string
-        default: Soorya8docker
+        default: kasi84
       repo:
         required: true
         type: string
-        default: AmexProject
+        default: E-commerce-project-springBoot
       branch:
         required: true
         type: string
-        default: main
+        default: master2
 
 jobs:
   call-workflow-branch-ref:
