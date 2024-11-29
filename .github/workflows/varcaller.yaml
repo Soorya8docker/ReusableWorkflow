@@ -41,7 +41,7 @@ jobs:
   
   call-workflow-kasi84-ref:
     if: ${{ inputs.username = 'kasi84' }}
-    uses: kasi84/simple-java-maven-app/.github/workflows/reusable.yml@master
+    uses: kasi84/java-maven-app/.github/workflows/reusable.yml@master
     with:
       username: ${{ inputs.username }}
       branch: ${{ inputs.branch }}
