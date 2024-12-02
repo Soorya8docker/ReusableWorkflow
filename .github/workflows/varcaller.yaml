@@ -39,7 +39,6 @@ jobs:
       token: ${{ secrets.GITHUB_TOKEN }}
    
   call-workflow-kasi84-ref:
-    if: success()
     uses: kasi84/java-maven-app/.github/workflows/reusable.yml@master
     with:
       username: kasi84
