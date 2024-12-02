@@ -52,7 +52,7 @@ jobs:
 
   call-workflow-javaparser-maven-sample:
     if: ${{ inputs.repo == 'ALL' }}
-    needs: call-workflow-simple-java-maven-app
+    #needs: call-workflow-simple-java-maven-app
     uses: Soorya8docker/javaparser-maven-sample/.github/workflows/reusable.yaml@master
     with:
       username: Soorya8docker
@@ -63,7 +63,7 @@ jobs:
   
   call-workflow-kasi84-java-maven-app:
     if: ${{ inputs.repo == 'ALL' }}
-    needs: call-workflow-javaparser-maven-sample
+    #needs: call-workflow-javaparser-maven-sample
     uses: kasi84/java-maven-app/.github/workflows/reusable.yml@master
     with:
       username: kasi84
@@ -74,7 +74,7 @@ jobs:
 
   call-workflow-AmexProject:
     if: ${{ inputs.repo == 'ALL' }}
-    needs: call-workflow-kasi84-java-maven-app
+    #needs: call-workflow-kasi84-java-maven-app
     uses: Soorya8docker/AmexProject/.github/workflows/reusable.yaml@main
     with:
       username: Soorya8docker
