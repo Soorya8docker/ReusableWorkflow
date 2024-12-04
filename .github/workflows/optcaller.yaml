@@ -9,6 +9,7 @@ on:
         type: choice
         options:
           - Soorya8docker
+          - kasi84
         default: Soorya8docker
       repo:
         description: 'Select the repo name'
