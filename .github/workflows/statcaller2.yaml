@@ -40,6 +40,7 @@ jobs:
       token: ${{ secrets.GITHUB_TOKEN }}
 
   call-workflow-javaparser-maven-sample:
+    needs: call-workflow-simple-java-maven-app
     if: ${{ needs.call-workflow-simple-java-maven-app.result == 'success' }}
     uses: Soorya8docker/javaparser-maven-sample/.github/workflows/reusable.yaml@master
     with:
