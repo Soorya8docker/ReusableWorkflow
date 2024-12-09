@@ -1,4 +1,4 @@
-name: Workflow Caller - Optional Repo
+name: Workflow Caller - Status Repo
 
 on:
   workflow_dispatch:
